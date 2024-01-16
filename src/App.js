@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoadingBar from "react-top-loading-bar";
 
 export class App extends Component {
+  state = { progress: 0 };
+  setProgress=(progress)=>{
+    this.setState({ progress: progress });
+  }
   render() {
     return (
       <>
         <Router>
+          <LoadingBar color="#f11946" progress={this.state.progress} />
           <Navbar />
           <Routes>
             <Route
@@ -15,7 +21,8 @@ export class App extends Component {
               path="/"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   key="general"
                   coutry="in"
                   category="general"
@@ -27,7 +34,8 @@ export class App extends Component {
               path="/business"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   key="business"
                   coutry="in"
                   category="business"
@@ -39,7 +47,8 @@ export class App extends Component {
               path="/entertainment"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   coutry="in"
                   key="entertainment"
                   category="entertainment"
@@ -51,7 +60,8 @@ export class App extends Component {
               path="/general"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   key="general"
                   coutry="in"
                   category="general"
@@ -62,7 +72,13 @@ export class App extends Component {
               exact
               path="/health"
               element={
-                <News pagesize={4} key="health" coutry="in" category="health" />
+                <News
+                  setProgress={this.setProgress}
+                  pagesize={16}
+                  key="health"
+                  coutry="in"
+                  category="health"
+                />
               }
             />
             <Route
@@ -70,7 +86,8 @@ export class App extends Component {
               path="/science"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   key="science"
                   coutry="in"
                   category="science"
@@ -81,7 +98,13 @@ export class App extends Component {
               exact
               path="/sports"
               element={
-                <News pagesize={4} key="sports" coutry="in" category="sports" />
+                <News
+                  setProgress={this.setProgress}
+                  pagesize={16}
+                  key="sports"
+                  coutry="in"
+                  category="sports"
+                />
               }
             />
 
@@ -90,7 +113,8 @@ export class App extends Component {
               path="/technology"
               element={
                 <News
-                  pagesize={4}
+                  setProgress={this.setProgress}
+                  pagesize={16}
                   key="technology"
                   coutry="in"
                   category="technology"
