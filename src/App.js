@@ -15,7 +15,7 @@ export class App extends Component {
               path="/"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   key="general"
                   coutry="in"
                   category="general"
@@ -27,7 +27,7 @@ export class App extends Component {
               path="/business"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   key="business"
                   coutry="in"
                   category="business"
@@ -39,7 +39,7 @@ export class App extends Component {
               path="/entertainment"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   coutry="in"
                   key="entertainment"
                   category="entertainment"
@@ -51,7 +51,7 @@ export class App extends Component {
               path="/general"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   key="general"
                   coutry="in"
                   category="general"
@@ -62,7 +62,7 @@ export class App extends Component {
               exact
               path="/health"
               element={
-                <News pagesize={8} key="health" coutry="in" category="health" />
+                <News pagesize={4} key="health" coutry="in" category="health" />
               }
             />
             <Route
@@ -70,7 +70,7 @@ export class App extends Component {
               path="/science"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   key="science"
                   coutry="in"
                   category="science"
@@ -81,7 +81,7 @@ export class App extends Component {
               exact
               path="/sports"
               element={
-                <News pagesize={8} key="sports" coutry="in" category="sports" />
+                <News pagesize={4} key="sports" coutry="in" category="sports" />
               }
             />
 
@@ -90,7 +90,7 @@ export class App extends Component {
               path="/technology"
               element={
                 <News
-                  pagesize={8}
+                  pagesize={4}
                   key="technology"
                   coutry="in"
                   category="technology"
