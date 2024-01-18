@@ -6,9 +6,10 @@ export default class Newsitem extends Component {
       this.props;
     return (
       <div className="card">
-        <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:'92%', zIndex: "1"}}>
-          {source}
-        </span>
+        <div style={{display:"flex", justifyContent:"end", position:"absolute",right:"0%"}}>
+          <span className="badge rounded-pill bg-danger">{source}</span>
+        </div>
+
         <img
           src={imageurl ? imageurl : "https://picsum.photos/200/150"}
           className="card-img-top"
